@@ -1,0 +1,96 @@
+\documentclass{beamer}
+\usetheme{metropolis}           % Use metropolis theme
+% additional config
+\usepackage[at]{easylist} % list utility
+\usepackage{booktabs} % table toprule, midrule, bottomrule
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% colors define
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{RoyalBlue}{rgb}{0.254902,0.411765,0.882353}
+
+%-------------------------------------------------------------
+\title{React/Redux 1 2 3}
+\date{\today}
+\author{Ryota Kaneko}
+\institute{Cybozu, Inc}
+
+\setbeamertemplate{blocks}[default]
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Table of Contents}
+\setbeamertemplate{section in toc}[sections numbered]
+\tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+\frametitle{text style}
+\begin{center}centering\end{center}
+
+The theme provides sensible defaults to \emph{emphasize} text,
+\alert{accent} parts or show \textbf{bold} results.
+\end{frame}
+
+\section{Listing}
+\begin{frame}[fragile]{Lists}
+Items
+\begin{easylist}[itemize]
+@ Milk
+@ Eggs
+@ Potatos
+\end{easylist}
+
+Enumerations
+\begin{enumerate}
+\item First, \item Second and \item Last.
+\end{enumerate}
+
+Descriptions
+\begin{description}
+\item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
+\end{description}
+\end{frame}
+
+\begin{frame}[fragile]{Tables}
+\begin{table}
+\caption{Largest cities in the world (source: Wikipedia)}
+\begin{tabular}{lr}
+\toprule
+City & Population\\
+\midrule
+Mexico City & 20,116,842\\
+Shanghai & 19,210,000\\
+Peking & 15,796,450\\
+Istanbul & 14,160,467\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\section{Blocks}
+\begin{frame}{Blocks}
+Three different block environments are pre-defined and may be styled with an
+optional background color.
+
+%   Color Box: Light Orange
+\setbeamercolor{boxsthlmLightOrange}{bg=white,fg=pblue}
+\begin{beamercolorbox}[wd=\linewidth,ht=10ex,dp=3ex]{boxsthlmLightOrange}
+\centering
+\texttt{Light Orange}\\
+\vspace{1em}
+\tiny{RGB:  255,215,210} \\
+\tiny{hex: \#ffd7d2}
+\end{beamercolorbox}
+
+\end{frame}
+
+\end{document}
